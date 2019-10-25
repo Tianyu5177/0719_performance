@@ -5,8 +5,15 @@
   <title>数据同步2</title>
 </head>
 <body>
-<input type="text" id="val">
+<input type="text" id="input2">
 <script type="text/javascript">
+
+let inputNode = document.getElementById('input2')
+window.addEventListener('storage',function (event) {
+  console.log(event)
+  inputNode.value = event.newValue
+  //inputNode.value = localStorage.getItem('data')
+})
 
 </script>
 </body>

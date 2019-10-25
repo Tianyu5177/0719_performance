@@ -13,6 +13,29 @@
 
 <script type="text/javascript">
   
+  let btn1 = document.getElementById('btn1')
+  let btn2 = document.getElementById('btn2')
+  let btn3 = document.getElementById('btn3')
+  let btn4 = document.getElementById('btn4')
+  
+  let person = {name:'kobe',age:18}
+  
+  btn1.onclick = ()=>{
+    sessionStorage.setItem('demo',JSON.stringify(person))
+  }
+
+  btn2.onclick = ()=>{
+    console.log(JSON.parse(sessionStorage.getItem('demo')));
+  }
+
+  btn3.onclick = ()=>{
+    sessionStorage.removeItem('demo')
+  }
+
+  btn4.onclick = ()=>{
+    sessionStorage.clear()
+  }
+  
 
 </script>
 </body>
